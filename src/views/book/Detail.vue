@@ -1,13 +1,16 @@
 <template>
   <div>
-    <a-col :span="18">列表</a-col>
-    <a-col :span="6">微信</a-col>
+    {{ this.$route.params.id }}
+    图书详情
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Book'
+  name: 'BookDetail',
+  mounted() {
+    console.log(this.$route.params);
+  }
 };
 </script>
 

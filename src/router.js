@@ -24,14 +24,21 @@ const router = new Router({
     },
     {
       path: '/book',
+      name: '图书',
       component: () =>
         import(/* webpackChunkName: "about" */ './views/book/Index.vue'),
-
       children: [
         {
-          path: '/:id',
+          path: '',
+          name: '图书列表',
           component: () =>
-            import(/* webpackChunkName: "about" */ './views/book/Index.vue')
+            import(/* webpackChunkName: "about" */ './views/book/List.vue')
+        },
+        {
+          path: ':id',
+          name: '图书详情',
+          component: () =>
+            import(/* webpackChunkName: "about" */ './views/book/Detail.vue')
         }
       ]
     }
