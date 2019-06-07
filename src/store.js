@@ -9,7 +9,8 @@ export default new Vuex.Store({
       { name: '首页', path: '/' },
       { name: '图书', path: '/book' },
       { name: '关于', path: '/about' }
-    ]
+    ],
+    pageTitle: ''
   },
   mutations: {
     breadListStateAdd(obj) {
@@ -17,6 +18,9 @@ export default new Vuex.Store({
     },
     breadListStateRemove(state, num) {
       state.breadListState = state.breadListState.slice(0, num);
+    },
+    setPageTitle(title) {
+      this.pageTitle = title;
     }
   }
 });

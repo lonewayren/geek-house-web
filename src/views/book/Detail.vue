@@ -8,9 +8,10 @@
 <script>
 export default {
   name: 'BookDetail',
-  mounted() {
-    console.log(this.$route.params);
-  }
+  data() {
+    return {};
+  },
+  computed: {}
 };
 </script>
 

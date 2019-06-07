@@ -14,7 +14,7 @@
           <a-icon type="edit" />博客</a-menu-item
         >
         <a-menu-item key="school"><a-icon type="bank" />校招</a-menu-item>
-        <a-menu-item key="company"><a-icon type="team" />社招</a-menu-item>
+        <a-menu-item key="society"><a-icon type="team" />社招</a-menu-item>
       </a-menu>
     </a-layout-header>
   </a-layout>

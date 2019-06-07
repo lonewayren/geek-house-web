@@ -1,7 +1,7 @@
 <template>
   <div>
     <a-col :span="18">
-      <router-view></router-view>
+      <router-view v-wechat-title="$route.meta.title"></router-view>
     </a-col>
     <a-col :span="6" class="qrcode"><Qrcode></Qrcode></a-col>
   </div>
