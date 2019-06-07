@@ -48,11 +48,12 @@ export default {
 
 <style>
 .style-detail{
-  padding: 0 10px;
+  padding: 0px 0px 0px 20px;
   margin-top: 10px;
 }
 .style-backSize{
     background-color: white;
+    border-radius: 8px; 
 }
 .style-h3{
     padding: 20px;
