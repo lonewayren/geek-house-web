@@ -105,7 +105,8 @@ export default {
       });
     },
     getBookDetail(item) {
-      this.$router.push(`/book/${item.id}`);
+      // this.$router.push(`/book/${item.id}`);
+      this.$router.push({name:'bookDetail',params:item});
     }
   }
 };
