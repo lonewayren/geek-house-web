@@ -96,10 +96,8 @@ export default {
         url: '/api/e-book',
         methods: 'get',
         params: kwargs
-      }).then(response => {
-        const {
-          data: { count, results }
-        } = response;
+      }).then(result => {
+        const { count, results } = result;
         this.bookList = results;
         this.bookListTotal = count;
       });

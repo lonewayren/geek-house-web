@@ -1,6 +1,7 @@
 <template>
   <div>
     {{ this.$route.params.id }}
+    {{ book }}
     图书详情
   </div>
 </template>
@@ -9,9 +10,26 @@
 export default {
   name: 'BookDetail',
   data() {
-    return {};
+    const book = {};
+    return {
+      book
+    };
   },
-  computed: {}
+  mounted() {
+    this.fetchBookDetail(this.$route.params.id, this.$route.query);
+  },
+  computed: {},
+  methods: {
+    fetchBookDetail(id, kwargs) {
+      this.$requests({
+        url: `/api/e-book/${id}`,
+        methods: 'get',
+        params: kwargs
+      }).then(response => {
+        this.book = response;
+      });
+    }
+  }
 };
 </script>
 
