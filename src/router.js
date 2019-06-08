@@ -24,12 +24,6 @@ const router = new Router({
         import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
-      path: '/bookDetail',
-      name: 'bookDetail',
-      component: () =>
-        import(/* webpackChunkName: "about" */'./views/book/BookDetail.vue'),
-    },
-    {
       path: '/book',
       name: '图书',
       meta: {
