@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "cross-env MOCK=none vue-cli-service serve",
     "serve:no-mock": "cross-env MOCK=none vue-cli-service serve",
     "serve:use-mock": "cross-env MOCK=true vue-cli-service serve",
     "build": "vue-cli-service build",

@@ -96,17 +96,15 @@ export default {
         url: '/api/e-book',
         methods: 'get',
         params: kwargs
-      }).then(response => {
-        const {
-          data: { count, results }
-        } = response;
+      }).then(result => {
+        const { count, results } = result;
         this.bookList = results;
         this.bookListTotal = count;
       });
     },
     getBookDetail(item) {
-      // this.$router.push(`/book/${item.id}`);
-      this.$router.push({name:'bookDetail',params:item});
+      this.$router.push(`/book/${item.id}`);
+      // this.$router.push({name:'bookDetail', params:item});
     }
   }
 };

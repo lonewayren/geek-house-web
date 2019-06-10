@@ -14,7 +14,7 @@
         <b>极客学舍</b><br />
         公众号
       </p>
-      <p>免费获取所有电子书</p>
+      <p>获取万本电子书</p>
     </div>
     <div style="height: 45%;width: 45%;float: right;text-align: center;">
       <img
