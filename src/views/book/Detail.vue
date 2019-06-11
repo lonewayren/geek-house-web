@@ -4,17 +4,17 @@
       <a-card hoverable key="qrcode" style="border-radius: 8px" :body-style="{padding: '5px',background: '#ffffff00'}" >
         <h2 class="style-h3">{{ book.title }}</h2>
         <br />
-        <img :src="attachImageUrl(book.cover)" />
+        <img :src="attachImageUrl(book.cover)" class="style-cover"/>
         <a-divider dashed orientation="left">内容简介</a-divider>
         <p class="style-p">{{ book.description }}</p>
       </a-card>
     </div>
     <div class="style-buttonCard">
       <a-card hoverabl key="qrcode" style="border-radius: 8px" :body-style="{padding: '5px',background: '#ffffff00'}" >
-          <div style="float:right;width:25%;">
-            <img src="@/assets/qrcode.jpg" alt="welcome" style="height: 200px;width: 200px;padding:20px"/>
+          <div style="float:right;width:30%;">
+            <img src="@/assets/qrcode.jpg" alt="welcome" style="height:70%;width:70%;padding:20px"/>
           </div>
-          <div style="float:left;width:75%;text-align:left;align-content:center;">
+          <div style="float:left;width:70%;text-align:left;align-content:center;">
             <h3 style="padding-top:25px;padding-left:20px;color:red;"> 
               提取密码已经被隐藏，输入验证码即可查看！(建议使用Chrome内核的浏览器)
             </h3>
@@ -78,8 +78,13 @@ export default {
   padding: 20px;
   text-align: left;
 }
+.style-cover{
+  width: 40%;
+  height: 40%;
+}
 .style-p {
-  padding: 0px 20px 20px 20px;
+  padding: 0px 20px;
+  text-indent: 2em;
   text-align: left;
 }
 .style-buttonCard{
