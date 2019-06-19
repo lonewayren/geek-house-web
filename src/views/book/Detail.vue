@@ -88,7 +88,7 @@ export default {
 
 <style scoped>
 .style-detail {
-  padding: 10px 0px 10px 20px;
+  /*padding: 10px 0px 10px 20px;*/
 }
 .style-h3 {
   padding: 20px;

@@ -1,7 +1,7 @@
 <template>
   <a-card style="margin-left: 20px; margin-top: 10px;border-radius: 8px">
     <a-list
-      :grid="{ gutter: 16, xs: 1, sm: 2, md: 2, lg: 4, xl: 4, xxl: 4 }"
+      :grid="{ gutter: 16, xs: 2, sm: 2, md: 4, lg: 6, xl: 6, xxl: 8 }"
       :data-source="workList"
     >
       <a-list-item
@@ -62,11 +62,10 @@ export default {
 
 <style scoped>
 .custom-svg-style >>> svg {
-  width: 165px;
-  height: 110px;
+  font-size: 100px;
 }
 .custom-card-style >>> .ant-card-body {
-  padding: 10px 10px;
+  padding: 5px 5px;
   bottom: 0;
 }
 </style>

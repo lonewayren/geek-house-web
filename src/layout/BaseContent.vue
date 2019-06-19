@@ -1,7 +1,9 @@
 <template>
   <a-layout-content>
     <Breadcurmb class="breadcurmb"></Breadcurmb>
-    <router-view v-wechat-title="$route.meta.title"></router-view>
+    <a-layout style="margin: 10px 20px; ;border-radius: 8px;">
+      <router-view v-wechat-title="$route.meta.title"></router-view>
+    </a-layout>
   </a-layout-content>
 </template>
 

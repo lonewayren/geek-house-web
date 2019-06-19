@@ -1,15 +1,15 @@
 <template>
-  <a-card style="margin-left: 20px; margin-top: 10px;border-radius: 8px">
+  <a-card>
     <a-list
-      :grid="{ gutter: 16, xs: 1, sm: 2, md: 4, lg: 4, xl: 4, xxl: 6 }"
+      :grid="{ gutter: 16, xs: 2, sm: 2, md: 4, lg: 6, xl: 6, xxl: 8 }"
       :data-source="bookList"
       :pagination="{
+        simple: true,
         onChange: changePage,
         showQuickJumper: true,
         pageSize: pageSize,
         current: currentPage,
-        total: bookListTotal,
-        showTotal: total => `共 ${total} 本`
+        total: bookListTotal
       }"
     >
       <a-list-item slot="renderItem" slot-scope="item, index">
@@ -104,7 +104,6 @@ export default {
     },
     getBookDetail(item) {
       this.$router.push(`/book/${item.id}`);
-      // this.$router.push({name:'bookDetail', params:item});
     }
   }
 };
