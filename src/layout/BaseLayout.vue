@@ -1,8 +1,8 @@
 <template>
   <a-layout class="ant-layout">
-    <BaseHeader></BaseHeader>
-    <BaseContent></BaseContent>
-    <BaseFooter></BaseFooter>
+    <BaseHeader style="height: 20vh;"></BaseHeader>
+    <BaseContent style="min-height: 70vh"></BaseContent>
+    <BaseFooter style="min-height: 10vh"></BaseFooter>
   </a-layout>
 </template>
 

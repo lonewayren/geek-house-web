@@ -1,5 +1,4 @@
 module.exports = {
-  publicPath: '/web',
   // apiPrefix : "",
   // timeout:1000,
   // accessTokenKey:'ACCESS_TOKEN',
@@ -41,5 +40,6 @@ module.exports = {
       }
     }
   },
-  configureWebpack: {}
+  configureWebpack: {},
+  assetsDir: 'static'
 };

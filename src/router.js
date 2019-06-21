@@ -19,11 +19,6 @@ const router = new Router({
       component: Home
     },
     {
-      path: '/about',
-      component: () =>
-        import(/* webpackChunkName: "about" */ './views/About.vue')
-    },
-    {
       path: '/book',
       name: '图书',
       meta: {
@@ -59,8 +54,18 @@ const router = new Router({
         title: '校招-极客学舍'
       },
       component: () =>
-        import(/* webpackChunkName: "about" */ './views/book/Index.vue'),
-      children: []
+        import(/* webpackChunkName: "about" */ './views/school/Index.vue'),
+      children: [
+        {
+          path: '/',
+          name: '公司列表',
+          meta: {
+            title: '公司列表-极客学舍'
+          },
+          component: () =>
+            import(/* webpackChunkName: "about" */ './views/school/List.vue')
+        }
+      ]
     },
     {
       path: '/society',
@@ -69,8 +74,18 @@ const router = new Router({
         title: '社招-极客学舍'
       },
       component: () =>
-        import(/* webpackChunkName: "about" */ './views/book/Index.vue'),
-      children: []
+        import(/* webpackChunkName: "about" */ './views/society/Index.vue'),
+      children: [
+        {
+          path: '/',
+          name: '公司列表',
+          meta: {
+            title: '公司列表-极客学舍'
+          },
+          component: () =>
+            import(/* webpackChunkName: "about" */ './views/society/List.vue')
+        }
+      ]
     }
   ]
 });
@@ -78,9 +93,6 @@ export default router;
 
 router.beforeEach((to, from, next) => {
   NProgress.start();
-  if (to.meta.title) {
-    console.log(to.meta.title);
-  }
   next();
 });
 
